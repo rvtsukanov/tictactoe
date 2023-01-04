@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">-->
+<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js"></script>
+</head>
+<body id="body">
+
+<div class="divTableBody">
+{% for row in deck %}
+        {% set rowloop = loop %}
+        <div class="divTableRow">
+            {% for item in row %}
+            <div class="divTableCell" id=cell-{{ rowloop.index - 1}}-{{ loop.index -1 }} >{{item}}</div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+<div id="players_num">Player num: {{num_players|default(0, true)}} </div>
+<div id="ismineturn">Your turn: {{isyourturn|default(true, true)}} </div>
+<div id="whoami">Who I am?: {{whoami|default('unknown', true)}} </div>
+<div id="console">Console message: </div>
+
+</body>
+</html>

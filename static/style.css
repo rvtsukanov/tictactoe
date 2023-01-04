@@ -1,0 +1,58 @@
+* {
+    text-align: center;
+    /*font-family: 'serif';*/
+}
+
+body {
+    display: inline-block;
+}
+
+.divTableBody {
+    /*margin: 0 auto;*/
+    display: inline-block;
+    /*width: auto;*/
+    /*height: auto;*/
+    margin-left: 10%;
+    margin-top: 50px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 200px;
+    /*border: 1px solid #1C6EA4;*/
+    /*background-color: #6dc6ee;*/
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(9, 9, 121) 51%, rgb(0, 40, 40) 100%);
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.divTableCell{
+  border: 3px solid #ffffff;
+  padding: 0px 0px;
+  text-align: center;
+    width: 130px;
+    height: 130px;
+  min-width: 100px;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    font-family: 'Rubik Bubbles', cursive;
+  font-size: 100px;
+    color: white;
+  cursor: pointer;
+}
+
+
+div.players_num {
+    display: block;
+    border: 1px solid #000000;
+    padding: 20px;
+    margin: 20px;
+}
+
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}

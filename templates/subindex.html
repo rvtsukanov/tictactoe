@@ -1,0 +1,15 @@
+<div class="divTableBody">
+{% for row in deck %}
+        {% set rowloop = loop %}
+        <div class="divTableRow">
+            {% for item in row %}
+            <div class="divTableCell" id=cell-{{ rowloop.index - 1}}-{{ loop.index -1 }} > {{item}}</div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+<div id="players_num">Player num: {{num_players|default(0, true)}} </div>
+<div id="ismineturn">Your turn: {{isyourturn|default(true, true)}} </div>
+<div id="whoami">Who I am?: {{whoami|default('unknown', true)}} </div>
+<div id="console">Console message: </div>
